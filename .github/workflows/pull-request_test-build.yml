@@ -1,0 +1,27 @@
+name: Backend - Pull Request - Test
+
+on:
+  pull_request:
+
+concurrency:
+  group: build-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout [${{ github.head_ref || github.ref_name }}]
+        uses: actions/checkout@v3
+
+      - name: Setup GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+          distribution: 'graalvm'
+          java-version: '21'
+          cache: 'maven'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Test project
+        run: mvn -B package
