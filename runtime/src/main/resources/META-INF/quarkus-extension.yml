@@ -1,0 +1,7 @@
+name: "Quarkus Velocity"
+description: "Transform messages using a Velocity template"
+metadata:
+  categories:
+    - "integration"
+  status:
+    - "stable"
