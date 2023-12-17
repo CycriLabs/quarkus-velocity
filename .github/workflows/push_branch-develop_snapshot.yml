@@ -1,0 +1,59 @@
+name: Backend - Develop - Publish snapshot on push
+
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  java-version: '21'
+  distribution: 'graalvm'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout [${{ github.head_ref || github.ref_name }}]
+        uses: actions/checkout@v4
+
+      - name: Setup GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+          distribution: ${{ env.distribution }}
+          java-version: ${{ env.java-version }}
+          cache: 'maven'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Adapt maven settings
+        uses: s4u/maven-settings-action@v2
+        with:
+          servers: '[{"id": "github", "username": "dummy", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
+          githubServer: false
+
+      - name: Test
+        run: mvn -B verify
+
+  publish-snapshot:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout [${{ github.head_ref || github.ref_name }}]
+        uses: actions/checkout@v4
+
+      - name: Setup GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+          distribution: ${{ env.distribution }}
+          java-version: ${{ env.java-version }}
+          cache: 'maven'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Adapt maven settings
+        uses: s4u/maven-settings-action@v2
+        with:
+          servers: '[{"id": "github", "username": "dummy", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
+          githubServer: false
+
+      - name: Publish snapshot
+        run: >
+          mvn -B deploy -DskipTests
