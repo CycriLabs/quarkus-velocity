@@ -97,7 +97,7 @@ jobs:
           mvn -B deploy -Pgithub -DskipTests
 
   next-dev-version:
-    needs: [build-container-image, build-artifacts]
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout [${{ github.head_ref || github.ref_name }}]
