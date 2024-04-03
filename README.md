@@ -28,3 +28,4 @@ The extension is available for the following Quarkus versions:
 | 1.0.0             | 3.6.3           | 2.3             |
 | 1.1.0             | 3.7.1           | 2.3             |
 | 1.2.0             | 3.8.1           | 2.3             |
+| 1.3.0             | 3.9.2           | 2.3             |
