@@ -9,6 +9,7 @@ classes for native builds.
 Add the following dependency to your `pom.xml`:
 
 ```xml
+
 <dependency>
     <groupId>com.cycrilabs</groupId>
     <artifactId>quarkus-velocity</artifactId>
@@ -32,3 +33,4 @@ The extension is available for the following Quarkus versions:
 | 1.4.0             | 3.14.2          | 2.3             |
 | 1.5.0             | 3.15.1          | 2.3             |
 | 1.6.0             | 3.16.1          | 2.3             |
+| 1.7.0             | 3.17.3          | 2.3             |
