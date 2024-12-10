@@ -28,7 +28,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Adapt maven settings
-        uses: s4u/maven-settings-action@v2
+        uses: s4u/maven-settings-action@v3.1.0
         with:
           servers: '[{"id": "github", "username": "dummy", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
           githubServer: false
@@ -52,7 +52,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Adapt maven settings
-        uses: s4u/maven-settings-action@v2
+        uses: s4u/maven-settings-action@v3.1.0
         with:
           servers: '[{"id": "github", "username": "dummy", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
           githubServer: false
@@ -87,7 +87,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Adapt maven settings
-        uses: s4u/maven-settings-action@v2
+        uses: s4u/maven-settings-action@v3.1.0
         with:
           servers: '[{"id": "github", "username": "dummy", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
           githubServer: false
@@ -114,7 +114,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Adapt maven settings
-        uses: s4u/maven-settings-action@v2
+        uses: s4u/maven-settings-action@v3.1.0
         with:
           servers: '[{"id": "github", "username": "dummy", "password": "${{ secrets.GITHUB_TOKEN }}"}]'
           githubServer: false
