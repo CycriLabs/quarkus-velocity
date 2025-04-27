@@ -38,7 +38,7 @@
 
         <!-- Dependency versions -->
         <quarkus.platform.version>3.21.4</quarkus.platform.version>
-        <velocity.version>2.3</velocity.version>
+        <velocity.version>2.4.1</velocity.version>
         <!-- /Dependency versions -->
 
         <!-- Plugin versions -->
