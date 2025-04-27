@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/CycriLabs/quarkus-velocity/compare/1.9.0...1.10.0) (2025-04-27)
+
+
+### Features
+
+* bump apache-velocity to 2.4.1 ([a04cc8e](https://github.com/CycriLabs/quarkus-velocity/commit/a04cc8e4ba8411ba3042231a903b9f92c2f78cd7))
+* bump quarkus to 3.21.4 ([bd94aca](https://github.com/CycriLabs/quarkus-velocity/commit/bd94acad661c431064b4f00dca61f9ce5f5dc44f))
+
 # [1.9.0](https://github.com/CycriLabs/quarkus-velocity/compare/1.8.0...1.9.0) (2025-02-28)
 
 
