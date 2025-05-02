@@ -37,3 +37,4 @@ The extension is available for the following Quarkus versions:
 | 1.8.0             | 3.18.1          | 2.3             |
 | 1.9.0             | 3.19.1          | 2.3             |
 | 1.10.0            | 3.21.4          | 2.4.1           |
+| 1.11.0            | 3.22.1          | 2.4.1           |
