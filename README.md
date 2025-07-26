@@ -39,3 +39,4 @@ The extension is available for the following Quarkus versions:
 | 1.10.0            | 3.21.4          | 2.4.1           |
 | 1.11.0            | 3.22.1          | 2.4.1           |
 | 1.12.0            | 3.23.0          | 2.4.1           |
+| 1.13.0            | 3.24.5          | 2.4.1           |
