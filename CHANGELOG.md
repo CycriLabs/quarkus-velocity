@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/CycriLabs/quarkus-velocity/compare/1.13.0...1.14.0) (2025-10-26)
+
+
+### Features
+
+* bump quarkus to 3.28.5 ([084b3cb](https://github.com/CycriLabs/quarkus-velocity/commit/084b3cb9f3989b4b96e31dbf0b556d6528eb163b))
+
 # [1.13.0](https://github.com/CycriLabs/quarkus-velocity/compare/1.12.0...1.13.0) (2025-07-26)
 
 
