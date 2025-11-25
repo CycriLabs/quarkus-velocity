@@ -41,3 +41,4 @@ The extension is available for the following Quarkus versions:
 | 1.12.0            | 3.23.0          | 2.4.1           |
 | 1.13.0            | 3.24.5          | 2.4.1           |
 | 1.14.0            | 3.28.5          | 2.4.1           |
+| 1.15.0            | 3.29.4          | 2.4.1           |
