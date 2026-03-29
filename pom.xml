@@ -6,7 +6,7 @@
 
     <groupId>com.cycrilabs</groupId>
     <artifactId>quarkus-velocity-parent</artifactId>
-    <version>1.15.1-SNAPSHOT</version>
+    <version>1.16.0</version>
     <packaging>pom</packaging>
     <name>Quarkus Velocity Extension - Parent</name>
 
