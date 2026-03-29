@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,7 +13,8 @@
     <scm>
         <url>https://github.com/CycriLabs/quarkus-velocity</url>
         <connection>scm:git:git://github.com/CycriLabs/quarkus-velocity.git</connection>
-        <developerConnection>scm:git:git@github.com:CycriLabs/quarkus-velocity.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:CycriLabs/quarkus-velocity.git
+        </developerConnection>
         <tag>HEAD</tag>
     </scm>
 
@@ -37,14 +39,14 @@
         <maven.compiler.release>21</maven.compiler.release>
 
         <!-- Dependency versions -->
-        <quarkus.platform.version>3.29.4</quarkus.platform.version>
+        <quarkus.platform.version>3.34.1</quarkus.platform.version>
         <velocity.version>2.4.1</velocity.version>
         <!-- /Dependency versions -->
 
         <!-- Plugin versions -->
-        <compiler-plugin.version>3.13.0</compiler-plugin.version>
-        <surefire-plugin.version>3.5.0</surefire-plugin.version>
-        <failsafe-plugin.version>${surefire-plugin.version}</failsafe-plugin.version>
+        <version.compiler.plugin>3.15.0</version.compiler.plugin>
+        <version.surefire.plugin>3.5.4</version.surefire.plugin>
+        <version.failsafe.plugin>${version.surefire.plugin}</version.failsafe.plugin>
         <!-- /Plugin versions -->
     </properties>
 
@@ -75,10 +77,11 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${surefire-plugin.version}</version>
+                    <version>${version.surefire.plugin}</version>
                     <configuration>
                         <systemPropertyVariables>
-                            <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                            <java.util.logging.manager>org.jboss.logmanager.LogManager
+                            </java.util.logging.manager>
                             <maven.home>${maven.home}</maven.home>
                             <maven.repo>${settings.localRepository}</maven.repo>
                         </systemPropertyVariables>
@@ -86,10 +89,11 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>${failsafe-plugin.version}</version>
+                    <version>${version.failsafe.plugin}</version>
                     <configuration>
                         <systemPropertyVariables>
-                            <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                            <java.util.logging.manager>org.jboss.logmanager.LogManager
+                            </java.util.logging.manager>
                             <maven.home>${maven.home}</maven.home>
                             <maven.repo>${settings.localRepository}</maven.repo>
                         </systemPropertyVariables>
@@ -97,7 +101,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${compiler-plugin.version}</version>
+                    <version>${version.compiler.plugin}</version>
                     <configuration>
                         <compilerArgs>
                             <arg>-parameters</arg>
